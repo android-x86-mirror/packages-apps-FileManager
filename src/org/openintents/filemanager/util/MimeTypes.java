@@ -53,11 +53,13 @@ public class MimeTypes {
 		
 		// Convert extensions to lower case letters for easier comparison
 		extension = extension.toLowerCase();
-		
+
 		String mimetype = mMimeTypes.get(extension);
-		
+
+		if(mimetype==null) mimetype = "*/*";
+
 		return mimetype;
 	}
-	
+
 
 }
